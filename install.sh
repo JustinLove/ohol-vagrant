@@ -6,3 +6,6 @@ cd /ohol/
 ./pullAndBuildLatest 
 ./pullAndBuildTestSystem.sh 
 cd OneLife/server/
+echo 0 > /ohol/OneLife/server/settings/allowBugReports.ini
+echo 0 > /ohol/OneLife/server/settings/requireTicketServerCheck.ini
+echo 0 > /ohol/OneLife/server/settings/useStatsServer.ini
