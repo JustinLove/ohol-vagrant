@@ -4,22 +4,22 @@ cd OneLife/server
 ./configure 1
 make
 
-if [ ! -h dataVersionNumber.txt ]
+if [ ! -h categories ]
 then
   ln -s ../../OneLifeData7/categories .
 fi
 
-if [ ! -h dataVersionNumber.txt ]
+if [ ! -h objects ]
 then
   ln -s ../../OneLifeData7/objects .
 fi
 
-if [ ! -h dataVersionNumber.txt ]
+if [ ! -h transitions ]
 then
   ln -s ../../OneLifeData7/transitions .
 fi
 
-if [ ! -h dataVersionNumber.txt ]
+if [ ! -h tutorialMaps ]
 then
   ln -s ../../OneLifeData7/tutorialMaps .
 fi
