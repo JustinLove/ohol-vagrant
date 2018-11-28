@@ -8,10 +8,12 @@ sudo apt-get install -y git g++ imagemagick xclip make libsdl1.2-dev libglu1-mes
 # VM GUI desktop
 sudo apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
 sudo VBoxClient --clipboard
-sudo VBoxClient --draganddrop
 sudo VBoxClient --display
 sudo VBoxClient --checkhostversion
 sudo VBoxClient --seamless
+sudo usermod -a -G audio vagrant
+
+#desktop command: startxfce4&
 
 cd /ohol/
 ./fetch_latest_tagged.sh

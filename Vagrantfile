@@ -54,6 +54,12 @@ Vagrant.configure("2") do |config|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
 
+    if RUBY_PLATFORM =~ /darwin/
+      vb.customize ["modifyvm", :id, '--audio', 'coreaudio', '--audiocontroller', 'hda'] # choices: hda sb16 ac97
+    elsif RUBY_PLATFORM =~ /mingw|mswin|bccwin|cygwin|emx/
+      vb.customize ["modifyvm", :id, '--audio', 'dsound', '--audiocontroller', 'ac97']
+    end
+
     # Customize the amount of memory on the VM:
     #vb.memory = "1024"
   end
