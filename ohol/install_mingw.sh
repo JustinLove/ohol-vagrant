@@ -17,9 +17,5 @@ sudo cp -a ./libpng/bin/*.dll /usr/i686-w64-mingw32/lib/
 
 sudo cp -a /usr/include/GL/glext.h /usr/i686-w64-mingw32/include/GL/
 
-#libpng16-16.dll
-#SDL.dll allready in dist
-#zlib1.dll
- 
 rm -rf ./SDL-1.2.15
 rm -rf ./libpng
