@@ -1,4 +1,5 @@
 #!/bin/sh
+cd OneLife/server/
 echo 0 > settings/useCurserServer.ini
 > settings/curseServerURL.ini
 echo 0 > settings/requireTicketServerCheck.ini

@@ -28,5 +28,4 @@ cd /ohol/
 ./link_server_directories.sh # run in git bash under windows; see also script
 #./pullAndBuildLatest 
 #./pullAndBuildTestSystem.sh 
-cd OneLife/server/
-../../configure_settings.sh
+./configure_settings.sh
