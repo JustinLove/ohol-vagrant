@@ -1,0 +1,4 @@
+* text=auto
+
+ohol/*.sh eol=lf
+ohol/pullAndBuildLatest eol=lf
