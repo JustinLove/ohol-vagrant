@@ -7,7 +7,7 @@
 sudo apt-get update
 
 # OHOL dev
-sudo apt-get install -y git g++ imagemagick xclip make libsdl1.2-dev libglu1-mesa-dev libgl1-mesa-dev g++-mingw-w64 p7zip-full
+sudo apt-get install -y git stgit g++ imagemagick xclip make libsdl1.2-dev libglu1-mesa-dev libgl1-mesa-dev g++-mingw-w64 p7zip-full
 
 # VM GUI desktop
 sudo apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 build-essential
