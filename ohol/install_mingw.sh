@@ -19,3 +19,5 @@ sudo cp -a /usr/include/GL/glext.h /usr/i686-w64-mingw32/include/GL/
 
 rm -rf ./SDL-1.2.15
 rm -rf ./libpng
+
+cp cross/* minorGems/game/platforms/SDL/

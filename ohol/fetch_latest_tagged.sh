@@ -8,6 +8,7 @@ fi
 if [ ! -e OneLife ]
 then
 	git clone https://github.com/jasonrohrer/OneLife.git
+	echo "server/runServer.bat binary" > OneLife/.git/info/attributes
 fi
 
 if [ ! -e OneLifeData7 ]
@@ -20,6 +21,7 @@ cd minorGems
 git fetch --tags
 latestTaggedVersion=`git for-each-ref --sort=-creatordate --format '%(refname:short)' --count=1 refs/tags/OneLife_v* | sed -e 's/OneLife_v//'`
 git checkout -f -q OneLife_v$latestTaggedVersion
+find network -type f -exec sed -i 's/Winsock/winsock/g' {} +
 
 
 cd ../OneLife

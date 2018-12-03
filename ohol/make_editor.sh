@@ -14,3 +14,4 @@ mv makeFileList.bak makeFileList
 
 cp /usr/i686-w64-mingw32/lib/libpng16-16.dll ./
 cp /usr/i686-w64-mingw32/lib/zlib1.dll ./
+cp /usr/i686-w64-mingw32/lib/SDL.dll ./

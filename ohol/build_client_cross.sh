@@ -13,3 +13,5 @@ cd ..
 cd gameSource
 
 make
+
+cp /usr/i686-w64-mingw32/lib/SDL.dll ./
