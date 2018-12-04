@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/xenial64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -51,19 +51,21 @@ Vagrant.configure("2") do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
-    # Display the VirtualBox GUI when booting the machine
-    vb.gui = true
-    vb.customize ["modifyvm", :id, "--vram", "128"]
-    vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
-
-    if RUBY_PLATFORM =~ /darwin/
-      vb.customize ["modifyvm", :id, '--audio', 'coreaudio', '--audiocontroller', 'hda'] # choices: hda sb16 ac97
-    elsif RUBY_PLATFORM =~ /mingw|mswin|bccwin|cygwin|emx/
-      vb.customize ["modifyvm", :id, '--audio', 'dsound', '--audiocontroller', 'ac97']
-    end
-
     # Customize the amount of memory on the VM:
     #vb.memory = "1024"
+
+    vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+
+    # Display the VirtualBox GUI when booting the machine
+    #vb.gui = true
+    #vb.customize ["modifyvm", :id, "--vram", "128"]
+
+    #if RUBY_PLATFORM =~ /darwin/
+      #vb.customize ["modifyvm", :id, '--audio', 'coreaudio', '--audiocontroller', 'hda'] # choices: hda sb16 ac97
+    #elsif RUBY_PLATFORM =~ /mingw|mswin|bccwin|cygwin|emx/
+      #vb.customize ["modifyvm", :id, '--audio', 'dsound', '--audiocontroller', 'ac97']
+    #end
+
   end
   #
   # View the documentation for the provider you are using for more
