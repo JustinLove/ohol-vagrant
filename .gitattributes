@@ -2,3 +2,4 @@
 
 ohol/*.sh eol=lf
 ohol/pullAndBuildLatest eol=lf
+ohol/cross/* eol=lf
